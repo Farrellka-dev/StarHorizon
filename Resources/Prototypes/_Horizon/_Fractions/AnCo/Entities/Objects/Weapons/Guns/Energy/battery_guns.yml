@@ -1,4 +1,3 @@
-# бейс вейпон сас. Xigovir: скоро эта сборка набухнет от САС пушек
 - type: entity
   id: BaseWeaponAnCo
   parent: [BaseItem, BaseAnCoContraband]

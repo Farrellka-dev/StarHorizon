@@ -6,7 +6,7 @@
   name: ОЧЕНЬ глубокая сумка с вещами АнКо
   description: Сумка с дохуя углубленными карманами на удобном магнитном крепеже.
   components:
-  - type: StorageFill # Тут надо перечислить все предметы UAS. Xigovir: пусть займется кто-то другой, я ебал это. К тому же уже AnCo
+  - type: StorageFill
     contents:
     - id: AnCosatchel
     - id: ClothingEyesGlassesAnCo
