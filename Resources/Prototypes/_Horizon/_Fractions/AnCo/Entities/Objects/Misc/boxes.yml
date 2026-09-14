@@ -232,11 +232,10 @@
   - type: SpawnItemsOnUse
     items:
     - id: SuitProtectiveAnCo
-    - id: AnCoGranadeSpawnSecure
-    - id: AnCoGranadeSpawnSecure
-    - id: AnCoGranadeSpawnSecure
-    - id: AnCoGranadeSpawnSecure
-# Xigovir: а что тут не так? это же буквально ящик с жучками
+    - id: AnCoDroneOff
+    - id: AnCoDroneOff
+    - id: AnCoDroneOff
+    - id: AnCoDroneOff
     - id: AnCoopenbox
 
 - type: entity
