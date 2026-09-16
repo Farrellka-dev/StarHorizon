@@ -217,6 +217,10 @@
     - AnCoWeaponHeavyCaseKnight
     - AnCoWeaponHeavyCaseKazmie
     - AnCoWeaponHeavyCaseArdon
+    - AnCoWeaponHeavyCaseNewWeaponShotgunAnCo
+    - AnCoWeaponHeavyCaseWeaponC20RAnCo
+    - AnCoWeaponHeavyCaseWeaponVectorAnCo
+    - AnCoWeaponHeavyCaseAnCoDrell
     # - AnCoWeaponHeavyCaseDome
     - AnCoWeaponHeavyCaseGuardian
     rareChance: 0.33

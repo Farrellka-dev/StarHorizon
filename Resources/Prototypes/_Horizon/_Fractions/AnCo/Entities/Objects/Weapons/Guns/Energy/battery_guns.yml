@@ -1,13 +1,13 @@
 # бейс вейпон сас. Xigovir: скоро эта сборка набухнет от САС пушек
 - type: entity
   id: BaseWeaponAnCo
-  parent: [BaseItem, BaseAnCoContraband]
+  parent: [ManufacturerAnCo, BaseItem, BaseAnCoContraband]
   categories: [ HideSpawnMenu ]
   suffix: StarHorizon, AnCo, Weapon
   components:
   - type: Sprite
   - type: Item
-    size: large
+    size: Ginormous
   - type: AmmoCounter
   - type: Gun
     fireRate: 2
@@ -29,8 +29,17 @@
     price: 500
 
 - type: entity
+  id: ManufacturerAnCo
+  parent: [BaseAnCoContraband]
+  categories: [ HideSpawnMenu ]
+  suffix: StarHorizon, AnCo, Weapon
+  components:
+  - type: NFWeaponDetails
+    manufacturer: "AnroxComputer`s"
+
+- type: entity
   id: BaseWeaponPowerCellAnCo
-  parent: [BaseItem, BaseAnCoContraband]
+  parent: [ManufacturerAnCo, BaseItem, BaseAnCoContraband]
   categories: [ HideSpawnMenu ]
   suffix: StarHorizon, AnCo, Weapon
   components:
@@ -442,3 +451,49 @@
         Heat: 20
   - type: Wieldable
     unwieldOnUse: true
+
+- type: entity
+  name: лазерный бур АнКо
+  parent: [BaseOperAnCoContraband, BaseWeaponAnCo]
+  id: AnCoDrell
+  description: Специально созданный лазер под работу с астероидами.
+  suffix: StarHorizon, AnCo, Weapon
+  components:
+  - type: Sprite
+    sprite: _Horizon/_Fractions/AnCo/Objects/Weapons/Guns/Battery/drell.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Gun
+    selectedMode: FullAuto
+    fireRate: 3
+    shotsPerBurst: 3
+    availableModes:
+      - Burst
+      - FullAuto
+    projectileSpeed: 25
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: LaserDrillAnCo
+    fireCost: 100
+  - type: Battery
+    maxCharge: 10000
+    startingCharge: 10000
+  - type: Appearance
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 100
+  - type: MultiHandedItem
+  - type: Clothing
+    sprite: _Horizon/_Fractions/AnCo/Objects/Weapons/Guns/Battery/drell.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage

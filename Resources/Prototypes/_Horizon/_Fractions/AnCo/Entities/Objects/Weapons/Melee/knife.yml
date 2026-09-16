@@ -1,6 +1,6 @@
 - type: entity
   name: Ардонивый нож АнКо
-  parent: BaseAnCoSharpWeapon
+  parent: [ManufacturerAnCo, BaseAnCoSharpWeapon]
   id: AnCoKnife
   description: Компактный боевой нож, идеальный для ближнего боя и метания.
   suffix: StarHorizon, AnCo, Weapon

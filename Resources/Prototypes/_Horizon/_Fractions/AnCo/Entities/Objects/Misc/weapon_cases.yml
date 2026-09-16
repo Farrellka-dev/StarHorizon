@@ -679,6 +679,61 @@
       # - id: AnCohypocapsule теперь без этой крутой штуки
       #   amount: 1
 
+- type: entity
+  id: AnCoWeaponHeavyCaseNewWeaponShotgunAnCo
+  parent: AnCoWeaponCaseHeavy
+  suffix: StarHorizon, AnCo, Case
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+      - id: NewWeaponShotgunAnCo
+        amount: 1
+      - id: NewMagazineAnCoShotgun50
+        amount: 1
+      - id: NewMagazineAnCoShotgun50
+        amount: 1
+
+- type: entity
+  id: AnCoWeaponHeavyCaseWeaponC20RAnCo
+  parent: AnCoWeaponCaseHeavy
+  suffix: StarHorizon, AnCo, Case
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponC20RAnCo
+        amount: 1
+      - id: NewMagazinePistolBig35
+        amount: 1
+      - id: NewMagazinePistolBig35
+        amount: 1
+
+- type: entity
+  id: AnCoWeaponHeavyCaseWeaponVectorAnCo
+  parent: AnCoWeaponCaseHeavy
+  suffix: StarHorizon, AnCo, Case
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponVectorAnCo
+        amount: 1
+      - id: NewMagazinePistolBig35
+        amount: 1
+      - id: NewMagazinePistolBig35
+        amount: 1
+
+- type: entity
+  id: AnCoWeaponHeavyCaseAnCoDrell
+  parent: AnCoWeaponCaseHeavy
+  suffix: StarHorizon, AnCo, Case
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+      - id: AnCoDrell
+        amount: 1
 # патроны
 
 - type: entity
