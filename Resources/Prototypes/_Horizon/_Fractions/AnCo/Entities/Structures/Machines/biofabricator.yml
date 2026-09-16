@@ -7,8 +7,6 @@
   name: биофабрикатор
   description: Восстанавливает тело игрока по карте памяти, если владелец карты мёртв и дал согласие. Тело восстанавливается голым, но с сохранёнными трейтами и имплантами.
   suffix: AnCo
-  placement:
-    mode: AlignTileAny
   components:
   - type: Sprite
     sprite: _Horizon/_Fractions/AnCo/Structures/Machines/cloning.rsi
@@ -17,8 +15,6 @@
         map: ["base"]
     offset: 0.5, 0.5
   - type: Transform
-    anchored: true
-    noRot: true
   - type: ApcPowerReceiver
     powerLoad: 300
   - type: Physics
@@ -28,13 +24,12 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "0.9,0.9,0.1,0.1"
+          bounds: "1,1.5,0.0,0.5"
         density: 190
         mask:
         - MachineMask
         layer:
         - MachineLayer
-
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StrongMetallic
