@@ -1,8 +1,8 @@
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ClothingUniformBase, BaseC3Contraband]
   id: ClothingUniformsSoldat
-  name: Форма ЧВК-ЧОП Vitezstvна
-  description: Производста ЧВК-ЧОП Vitezstvна
+  name: Форма ЧВК-ЧОП
+  description: Производства ЧВК-ЧОП
   suffix: Sponsor
   components:
   - type: Sprite

@@ -1,8 +1,8 @@
 - type: entity
-  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseSecurityContraband]
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC3Contraband]
   id: ClothingBeltSoldat
-  name: РПС ЧВК-ЧОП Vitezstvна
-  description: РПС производста Vitezstvна
+  name: РПС ЧВК-ЧОП
+  description: РПС производства ЧВК-ЧОП
   suffix: Sponsor
   components:
   - type: Sprite

@@ -1,7 +1,7 @@
 - type: entity
-  parent: ClothingOuterBaseMedium
+  parent: [ClothingOuterBaseMedium, BaseC3Contraband]
   id: ClothingOuterArmorBaseMabarek2
-  name: Бронежилет ЧВК-ЧОП Vitezstvна
+  name: Бронежилет ЧВК-ЧОП
   description: Тактический бронежилет цвета олива, обеспечивающий надёжную защиту от огнестрельного оружия. Изготовлен из прочных износостойких материалов, устойчивых к воздействию влаги и механическим повреждениям. Оснащён баллистическими вставками 4 уровня защиты по ГОСТ, способными выдерживать попадание винтовочных пуль калибром до 7,62×54 мм (включая Б-32).
   suffix: Sponsor
   components:

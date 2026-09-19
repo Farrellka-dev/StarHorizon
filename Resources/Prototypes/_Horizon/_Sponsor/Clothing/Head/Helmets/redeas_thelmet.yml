@@ -1,8 +1,8 @@
 - type: entity
-  parent: ClothingHeadHelmetERTLeader
-  id: ClothingHeadHelmetVitezstvnaSecurity
+  parent: [ClothingHeadHelmetERTLeader, BaseC3Contraband]
+  id: ClothingHeadHelmetSoldatSecurity
   name: ERT security helmet
-  description: Шлем ЧВК-ЧОП Vitezstvна
+  description: Шлем ЧВК-ЧОП
   suffix: Sponsor
   components:
   - type: Sprite
