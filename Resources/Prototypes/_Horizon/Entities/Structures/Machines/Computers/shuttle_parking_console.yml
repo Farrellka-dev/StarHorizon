@@ -1,0 +1,44 @@
+- type: entity
+  parent: BaseComputer
+  id: ComputerShuttleParking
+  name: shuttle parking console
+  description: Parks the shuttle it's anchored to into bluespace storage, or summons it back for the character whose ID is inserted.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shuttle
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: ShuttleParkingConsole
+    privilegedIdSlot:
+      name: shuttle-parking-console-privileged-id
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+      ejectOnBreak: true
+      swap: false
+      whitelist:
+        components:
+        - IdCard
+  - type: ItemSlots
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+        ents: []
+      ShuttleParkingConsole-privilegedId: !type:ContainerSlot
+  - type: ActivatableUI
+    key: enum.ShuttleParkingConsoleUiKey.Key
+    requiresComplex: true
+  - type: UserInterface
+    interfaces:
+      enum.ShuttleParkingConsoleUiKey.Key:
+        type: ShuttleParkingConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface

@@ -1,0 +1,80 @@
+# A personal safety-deposit machine that looks like a vending machine, but actually stores real
+# items (with their components and nested contents intact) per-player (keyed by ckey), persisting
+# them across round restarts. See Content.Server/_Horizon/PersonalStorage.
+#
+# Deliberately does NOT inherit from VendingMachine: it reuses only the visuals (BaseMachinePowered
+# + the vending machine sprite/physics/power scaffolding), since the actual VendingMachineComponent
+# stock-dispensing logic and its BUI are irrelevant here (this is a verb-driven personal storage
+# box, not a shop).
+- type: entity
+  parent: BaseMachinePowered
+  id: PersonalStorageMachine
+  name: personal storage unit
+  description: A secure personal storage unit. Insert your ID to deposit or withdraw your belongings.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/empty.rsi
+    snapCardinals: true
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.45,0.25,0.45"
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+        density: 200
+  - type: Anchorable
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: PointLight
+    enabled: false
+    castShadows: false
+    radius: 1.5
+  - type: LitOnPowered
+  - type: Appearance
+  - type: WiresVisuals
+  - type: WiresPanel
+  - type: Wires
+    boardName: wires-board-name-vendingmachine
+    layoutId: Vending
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Breakage"]
+  - type: Repairable
+    doAfterDelay: 8
+  - type: PersonalStorage
+    privilegedIdSlot:
+      name: personal-storage-privileged-id
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+      ejectOnBreak: true
+      swap: false
+      whitelist:
+        components:
+        - IdCard
+  - type: ItemSlots
+  - type: ContainerContainer
+    containers:
+      PersonalStorage-privilegedId: !type:ContainerSlot
+      PersonalStorage-items: !type:Container
