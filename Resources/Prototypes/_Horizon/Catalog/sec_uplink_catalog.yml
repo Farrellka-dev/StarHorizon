@@ -1482,9 +1482,9 @@
     contents:
     - id: WeaponLauncherGL70
     - id: NFGrenadeFrag
-      amount: 6
+      amount: 3
     - id: NFGrenadeBlast
-      amount: 6
+      amount: 3
 
 - type: listing
   id: UplinkSecurityGrenadeLauncherM81Bundle
