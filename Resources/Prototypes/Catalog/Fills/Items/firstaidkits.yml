@@ -35,7 +35,6 @@
       - id: Gauze
       - id: PillCanisterIron
       - id: PillCanisterCopper
-      - id: SprayBottleStypticPowder # SH-Tweak
 
 - type: entity
   id: MedkitToxinFilled
